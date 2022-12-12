@@ -12,14 +12,11 @@ const Detail = () => {
   const params = useParams();
 
   useEffect(() => {
-    // fetch('data/detailFeed.json')
     fetch(`${API.detail}/${params.id}`)
-      // fetch('http://10.58.52.78:3000/post/1')
       .then(response => response.json())
       .then(result => setFeedData(result.post));
   }, [params.id]);
 
-  // console.log(params);
   return (
     <Container>
       <FeedBox>

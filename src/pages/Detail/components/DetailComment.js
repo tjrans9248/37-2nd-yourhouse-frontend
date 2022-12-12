@@ -46,17 +46,12 @@ const DetailComment = ({
         <ReplyUserText>{comments.comment}</ReplyUserText>
 
         <ReplyEtc>
-          {/* <HeartButton like={like} onClick={() => setLike(!like)} /> */}
-          {/* <DeleteButton onClick={() => removeComment(value.id)} /> */}
+    
           {comments.commentEx == 1 ? (
             <DeleteButton id={comments.id} onClick={deleteComments} />
           ) : null}
 
-          {/* <DeleteButton
-          
-            commentArray={commentArray}
-            onClick={setCommentArray}
-          /> */}
+  
         </ReplyEtc>
       </div>
     </ReplyContainer>
@@ -80,7 +75,7 @@ const ReplyContainer = styled.div`
 `;
 
 const ReplyUserId = styled.div`
-  /* border: 1px solid red; */
+  
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -94,21 +89,15 @@ const ReplyUserText = styled.div`
   word-break: keep-all;
   color: ${props => props.theme.style.black};
   font-size: 16px;
-  /* border: 1px solid red; */
+  
 `;
 
 const ReplyEtc = styled.div`
-  /* border: 1px solid red; */
   height: 30px;
   ${props => props.theme.variables.flex('', '', 'center')}
 `;
 
-// const ReplyLike = styled.button`
-//   width: 18px;
-//   height: 18px;
-// `;
 
-// const ReplyBtn = styled.img``;
 
 const ReplyDelete = styled.button`
   width: 40px;
@@ -117,5 +106,5 @@ const ReplyDelete = styled.button`
   border: none;
   background-color: ${props => props.theme.style.white};
   color: ${props => props.theme.style.middleGrey};
-  /* border: 1px solid red; */
+  
 `;

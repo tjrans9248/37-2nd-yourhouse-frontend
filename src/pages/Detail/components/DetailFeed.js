@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const DetailFeed = ({ feed }) => {
   const { products, room_size, residence, style, space, main_pic_url, text } =
     feed;
-  // console.log(products[0].offset_X);
+  
   return (
     <>
       <DetailNav>
@@ -37,11 +37,11 @@ const DetailFeed = ({ feed }) => {
       </DetailCircleBox>
 
       <DetailSubPic>
-        {/* {console.log(feed.products.sub_pic_url)} */}
+      
         {feed.products.map((item, id) => (
           <DetailInnerProduct key={id} src={item.sub_pic_url} />
         ))}
-        {/* <DetailInnerPicBanner>비슷한</DetailInnerPicBanner> */}
+     
       </DetailSubPic>
       <DetailText>{text}</DetailText>
       <DetailHashTagBox>
@@ -120,8 +120,6 @@ const DetailProductCont = styled.div`
 `;
 
 const DetailBluePoint = styled.button`
-  /* top: 0px; */
-  /* left: 0px; */
   width: 20px;
   height: 18px;
   background: ${props => props.theme.style.skyBlue};

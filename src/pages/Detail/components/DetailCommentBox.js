@@ -96,7 +96,7 @@ const DetailFooter = ({ postId }) => {
         <CommentInputBox onSubmit={commentSubmit}>
           <CommentInput
             type="text"
-            // onSubmit={pressEnter}
+            
             onChange={onChange}
             value={comment}
             placeholder="칭찬과 격려의 댓글은 작성자에게 큰 힘이 됩니다 :)"
@@ -120,15 +120,12 @@ const DetailFooter = ({ postId }) => {
             postId={postId}
             paramsId={paramsId}
           >
-            {/* {console.log(value)} */}
           </DetailComment>
         ))}
-        {/* {feed.comments.map((comments, id) => (
-          <DetailComment value={comments} key={id} />
-        ))} */}
+  
       </Comment>
 
-      {/* <DetailPageNation /> */}
+    
       <DetailPaginationBox>
         <PaginationBtn
           onClick={() => {
@@ -244,32 +241,3 @@ const PaginationBtn = styled.button`
     opacity: 4;
   }
 `;
-
-// const DetailPageBtnBox = styled.div`
-//   ${props => props.theme.variables.flex('', 'center', 'center')}
-//   /* border: 1px solid red; */
-//   margin: 20px 0px 40px 0px;
-// `;
-
-// const PageBtn = styled.button`s
-//   width: 32px;
-//   height: 32px;
-//   border-radius: 4px;
-//   color: ${props => props.theme.style.white};
-//   background: ${props => props.theme.style.skyBlue};
-//   border: none;
-//   margin-inline: 10px;
-//   &:hover {
-//     opacity: 4;
-//   }
-// `;
-
-// const PageBtnLeft = styled.button`
-//   width: 32px;
-//   height: 32px;
-//   border-radius: 4px;
-//   border: none;
-//   color: ${props => props.theme.style.white};
-// `;
-
-// const PageBtnRight = styled(PageBtnLeft)``;
